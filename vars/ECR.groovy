@@ -18,5 +18,3 @@ def ECRlogin_PUSH() {
          '''.stripIndent())
 
       }
-    } 
-}
