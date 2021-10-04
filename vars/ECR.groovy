@@ -4,10 +4,10 @@ def call(Map config = [:]) {
          #!/bin/bash
          
            echo "Authenticate with ECR"
-            set +x 
+            set +x # Don't echo credentials from the login command!
             echo "Building New ECR Image"
-            eval $(aws ecr get-login --region ${config.AWS_REGION} --no-include-email)
-             
+            aws ecr get-login --region ${config.AWS_REGION} --no-include-email
+            # Enable Debug and Exit immediately 
             set -xe
             echo ${config.GITCOMMIT}
             docker build  -t ${config.IMAGE}:${config.GITCOMMIT} .
