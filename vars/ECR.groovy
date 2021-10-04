@@ -1,4 +1,4 @@
-def ECRlogin_PUSH(Map config = [:]) {
+def call(Map config = [:]) {
     sh(label: 'ECR login and docker push', script:
          '''
          #!/bin/bash
