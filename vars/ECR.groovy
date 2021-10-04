@@ -4,6 +4,9 @@ def call(Map config = [:]) {
          #!/bin/bash
          
            echo "Authenticate with ECR"
+           echo ${config.GITCOMMIT}
+           echo ${config.IMAGE}
+           echo ${config.AWS_REGION}
             set +x # Don't echo credentials from the login command!
             echo "Building New ECR Image"
             aws ecr get-login --region ${config.AWS_REGION} --no-include-email
