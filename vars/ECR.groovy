@@ -3,7 +3,7 @@ def call() {
          '''
          #!/bin/bash
            
-           if [ -z ${GITCOMMIT} ]; then echo "git commit is not set" && exit 14 ;fi
+           if [ -z ${bla} ]; then echo "git commit is not set" && exit 14 ;fi
            echo "Authenticate with ECR"
             set +x # Don't echo credentials from the login command!
             echo "Building New ECR Image"
