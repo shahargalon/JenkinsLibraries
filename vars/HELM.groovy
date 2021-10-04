@@ -4,7 +4,7 @@ def call() {
          #!/bin/bash
             
 	    if [ -z ${GITCOMMIT} || -z ${APPNAME} || -z ${IMAGE} ]; then echo "one of the require variables is not set" && exit 14 ;fi  
-            helm upgrade -i --set applicationManifest.image=${IMAGE}:${GITCOMMIT} ${APPNAME} ./helm
+        helm upgrade -i --set applicationManifest.image=${IMAGE}:${GITCOMMIT} ${APPNAME} ./helm
         
-	 '''.stripIndent())
+	 	'''.stripIndent())
 	} 
